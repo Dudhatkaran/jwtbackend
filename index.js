@@ -14,7 +14,7 @@ require('./DB/Connection');
 
 app.use('/api', require('./API/Allapi'));
 
-app.listen(1234, () => {
+app.listen(1010, () => {
     console.log("Sever Start..............");
 });
 

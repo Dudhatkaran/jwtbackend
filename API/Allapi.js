@@ -3,7 +3,7 @@ const app = express();
 const router = express.Router();
 
 const jwt = require('jsonwebtoken');
-const jwtKey = 'abcd';
+const jwtKey = 'gdhih@xh&*saa^sdfb>gb<hb%dptg$^$hdhd&^ifu5?734tiunjkngklnl>jj';
 
 // Schema Added...
 const JWTSchema = require('../MODEL/Schema');
@@ -14,7 +14,7 @@ router.post('/login', async (req, res) => {
             email: req.body.email,
             password: req.body.password,
         })
-        jwt.sign({ logIn }, jwtKey, { expiresIn: "60min" }, (error, token) => {
+        jwt.sign({ logIn }, jwtKey, { expiresIn: "1hour" }, (error, token) => {
             if (error) {
                 res.send({ error: "Token is invalid" });
             } else {
